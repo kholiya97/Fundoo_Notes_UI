@@ -1,0 +1,52 @@
+@import '../../style/style.scss';
+.form-field {
+    width: 49%;
+    padding-right: 1%;
+}
+
+.name-field {
+    width: 100%;
+}
+@media only screen and (max-width: 490px) {
+    .form-field{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .form-field{
+        width: 100%;
+    }
+}
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    width: auto;
+    height: auto;
+    padding: 48px 40px 36px 40px;
+}
+
+.signin {
+    text-decoration: none;
+    color: blue;
+    font-size: 30;
+}
+
+.image {
+    width: 400px;
+}
+
+.heading {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.fundoo {
+    font-size: 25px;
+    margin-bottom: 20px;
+    //margin-top: 25px;
+}
+
