@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatInputModule } from '@angular/material/input';
@@ -19,14 +19,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegisterComponent } from './register/register.component';
-
+import { ForgotpasswordComponent } from './Pages/forgotpassword/forgotpassword.component';
+import { 
+  NgxMatErrorsModule
+} from 'ngx-mat-errors';
+//import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//import {CUSTOM_ELEMENTS_SCHEMA} from `@angular/core`;
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    ForgotpasswordComponent,
+  
+    
 
   ],
   imports: [MatCardModule,
@@ -40,8 +49,20 @@ import { RegisterComponent } from './register/register.component';
     MatMenuModule,
     MatTooltipModule,
     MatDialogModule,
-    MatInputModule,MatButtonModule,FormsModule, ReactiveFormsModule,MatIconModule,HttpClientModule,MatFormFieldModule,MatSnackBarModule
+    MatInputModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatIconModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    NgxMatErrorsModule
+    
+    
   ],
+  //schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
