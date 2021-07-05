@@ -64,7 +64,7 @@ import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.comp
     
     
   ],
-  //schemas: [ CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
