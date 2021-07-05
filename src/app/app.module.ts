@@ -25,6 +25,7 @@ import { ForgotpasswordComponent } from './Pages/forgotpassword/forgotpassword.c
 import { 
   NgxMatErrorsModule
 } from 'ngx-mat-errors';
+import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.component';
 //import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import {CUSTOM_ELEMENTS_SCHEMA} from `@angular/core`;
 
@@ -34,6 +35,7 @@ import {
     LoginComponent,
     RegisterComponent,
     ForgotpasswordComponent,
+    ResetpasswordComponent,
   
     
 

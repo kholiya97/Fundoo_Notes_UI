@@ -56,24 +56,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void { }
   register() {
-    let userdata = {
-      "employeeFirstName": this.FirstName.value,
-      "employeeLastName": this.LastName.value,
-      "email": this.Email.value,
-      "phoneNumber": "7002285211",
-      "password": this.Password.value,
-    }
-    // if (this.FirstName.valid && this.LastName.valid && this.Email.valid && this.Password.valid && this.ConfirmPassword.valid) {
-    //   this.user.register(userdata).subscribe(response => {
-    //     this.utility.displayMessage("register Successfully");
-    //     this.route.navigate(['login'])
-
-    //   },
-    //     error => {
-    //       this.utility.displayMessage("Register Unsuccessfully");
-    //     }
-    //   )
-    // }
+    // to do
   }
 
 }
