@@ -26,6 +26,7 @@ import {
   NgxMatErrorsModule
 } from 'ngx-mat-errors';
 import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.component';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 //import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import {CUSTOM_ELEMENTS_SCHEMA} from `@angular/core`;
 
@@ -36,6 +37,7 @@ import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.comp
     RegisterComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,
+    DashboardComponent,
   
     
 
@@ -64,7 +66,7 @@ import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.comp
     
     
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
+  //schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

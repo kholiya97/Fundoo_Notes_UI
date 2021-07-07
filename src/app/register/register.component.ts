@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserserviceService } from '../Services/userservice/userservice.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   hide = true;
   errors:any;
 
-  constructor() {
+  constructor(private user: UserserviceService) {
    }
    Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
@@ -56,7 +57,17 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void { }
   register() {
-    // to do
-  }
-
+    let userdata = {
+      "FirstName": this.FirstName.value,
+      "LastName": this.LastName.value,
+      "email": this.Email.value,
+      "password": this.Password.value,
+    }
+    this.user.register(userdata).subscribe(response => {
+      console.log(" register successfull", response);
+        
+      
+  
+  });
+  } 
 }
