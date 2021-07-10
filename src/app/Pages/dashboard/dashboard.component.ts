@@ -11,8 +11,8 @@ export class DashboardComponent implements OnInit {
   isMenuOpen = false;
   contentMargin = 240
   data: any
-  arr: any
-  length: any
+  // arr: any
+  // length: any
   // trashClick = false
   // notesclick = false
   // archiveClick = false
@@ -64,3 +64,7 @@ export class DashboardComponent implements OnInit {
     }
 
 
+ // this.archiveClick = !this.archiveClick
+      // if (this.archiveClick == true) {
+      //   this.route.navigate(['dashboard/archive']);
+      //   return this.archiveClick = false

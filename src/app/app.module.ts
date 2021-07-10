@@ -27,6 +27,11 @@ import {
 } from 'ngx-mat-errors';
 import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { CreatenotesComponent } from './Pages/createnotes/createnotes.component';
+import { GetnoteComponent } from './Pages/getnote/getnote.component';
+import { DisplayComponent } from './Pages/display/display.component';
+import { IconsComponent } from './Pages/icons/icons.component';
+
 //import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import {CUSTOM_ELEMENTS_SCHEMA} from `@angular/core`;
 
@@ -38,6 +43,11 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
     ForgotpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
+    CreatenotesComponent,
+    GetnoteComponent,
+    DisplayComponent,
+    IconsComponent
+  
   
     
 
@@ -66,7 +76,7 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
     
     
   ],
-  //schemas: [ CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

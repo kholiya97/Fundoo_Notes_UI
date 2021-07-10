@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
   hide = true;
   errors:any;
 
-  constructor(private user: UserserviceService) {
+  constructor(private user: UserserviceService,private http:HttpClient) {
    }
    Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
@@ -58,16 +59,21 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void { }
   register() {
     let userdata = {
-      "FirstName": this.FirstName.value,
-      "LastName": this.LastName.value,
-      "email": this.Email.value,
-      "password": this.Password.value,
+      "firstName": this.FirstName.value,
+      "lastName": this.LastName.value,
+      "Email": this.Email.value,
+      "Password": this.Password.value,
     }
-    this.user.register(userdata).subscribe(response => {
-      console.log(" register successfull", response);
+    this.http.post("http://localhost:60112/api/User/register",userdata).subscribe()
+  //   (response => {
+  //       console.log(" register successfull", response);
+  // });
+    // this.user.register(userdata).subscribe(response => {
+    //   console.log(" register successfull", response);
         
       
   
-  });
+ 
   } 
 }
+

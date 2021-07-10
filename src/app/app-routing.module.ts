@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreatenotesComponent } from './Pages/createnotes/createnotes.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { DisplayComponent } from './Pages/display/display.component';
 import { ForgotpasswordComponent } from './Pages/forgotpassword/forgotpassword.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { ResetpasswordComponent } from './Pages/resetpassword/resetpassword.component';
@@ -14,7 +16,10 @@ const routes: Routes = [
 { path: "register", component: RegisterComponent },
 {path:"forgotpassword",component:ForgotpasswordComponent},
 {path:"resetpassword",component:ResetpasswordComponent},
-{path:"dashboard",component:DashboardComponent}
+{path:"dashboard",component:DashboardComponent,
+children: [{path:"notes",component:DisplayComponent}]},
+ {path:"**",component:RegisterComponent}
+
 ];
 
 @NgModule({
