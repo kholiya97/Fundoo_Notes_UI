@@ -176,3 +176,16 @@ background: #eee;
 // margin-top: 20px;
 // margin-bottom: 20px;
 // }
+.close-button{
+  display: flex; 
+  justify-content:space-between;
+  margin-top: 20px;
+  margin-left: -2px;
+  margin-right: 1000px;
+}
+.getnote{
+  display:table-cell;
+  height: 240px;
+  width:240px;
+}
+

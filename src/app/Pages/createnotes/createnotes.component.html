@@ -1,3 +1,4 @@
+<form #addform="ngForm" [formGroup]="noteForm" >
 <mat-accordion class="addNote">
     <!-- #docregion basic-panel -->
     <!-- #docregion hide-toggle -->
@@ -5,20 +6,20 @@
         <!-- #enddocregion hide-toggle -->
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <form #addform="ngForm" (ngSubmit)="submit();addform.reset()">
-                    <textarea class="title" matInput placeholder="Title" autocomplete="off" [(ngModel)]="notes.title"
-                        name="first"></textarea>
-                </form>
+               
+                    <textarea formControlName="title" class="title" matInput placeholder="Title" autocomplete="off" ></textarea>
+               
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <form #addform="ngForm" (ngSubmit)="submit();addform.reset()">
-            <input class="title" matInput placeholder="Take a note..." [(ngModel)]="notes.description" name="first">
+        
+            <input formControlName="description" class="title" matInput placeholder="Take a note..." >
             <div class="close-button">
                 <div class="note-icon">
                     <app-icons></app-icons>
                 </div>
-                <button mat-button (click)="onCloseClick()">close</button>
+                <button mat-button (click)="close()">close</button>
             </div>
-        </form>
+       
     </mat-expansion-panel>
 </mat-accordion>
+</form>

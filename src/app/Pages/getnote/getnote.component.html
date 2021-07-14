@@ -1,12 +1,12 @@
 <div class="main-box">
-    <div class="box" *ngFor="let array of arr">
+    <div class="box" >
         <ng-container >
             <mat-card class="card">
                 <div class="title" (click)="onClick()">
-                    {{array.title}}
+                    {{note.title}}
                 </div>
                 <div class="description">
-                    {{array.description}}
+                    {{note.notes}}
                 </div>
                 <div class="description">
                     <ng-container >

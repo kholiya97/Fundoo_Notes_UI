@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -20,6 +21,8 @@ export class DashboardComponent implements OnInit {
   errors:any;
 
   constructor() { }
+  arr:any;
+  
   onToolBarToggle() {
     this.isMenuOpen = !this.isMenuOpen
     if (!this.isMenuOpen) {
@@ -28,8 +31,24 @@ export class DashboardComponent implements OnInit {
       this.contentMargin = 240;
     }
   }
-
-  ngOnInit(): void {}
+  get f() { return this.myForm.controls; }
+  myForm = new FormGroup({
+    title:new FormControl(),
+    note:new FormControl(),
+  })
+  close(){
+    
+      let data = {
+        "title": this.f.title.value,
+        "note":this.f.note.value
+      }
+      this.arr.push(data);
+    }
+ 
+  ngOnInit(): void {
+    this.arr = [{"title":"harshpal","notes":"jai shri ram"},{"title":"hi","notes":"i love coding"}
+   
+    ];}
   submit() {
     // this.dataservice.getNotes().subscribe(res => {
     //   this.data = res
@@ -40,7 +59,8 @@ export class DashboardComponent implements OnInit {
 
     // })
   }
-   onTrashClick() {
+  onTrashClick() {
+    this.arr.pop();
   //   this.trashClick = !this.trashClick
   //   if (this.trashClick == true) {
   //     this.route.navigate(['dashboard/trash']);
@@ -55,7 +75,8 @@ export class DashboardComponent implements OnInit {
     //   return this.notesclick = false
     // }
   }
-    onArchiveClick() {
+  onArchiveClick() {
+    
       // this.archiveClick = !this.archiveClick
       // if (this.archiveClick == true) {
       //   this.route.navigate(['dashboard/archive']);

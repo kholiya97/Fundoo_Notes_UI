@@ -2,88 +2,105 @@
   href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
   rel="stylesheet">
 <mat-card style="padding: 0px;">
-  <div class="header">
-      <div class="header-main-1" role="button">
-          <button mat-icon-button>
-              <mat-icon (click)="onToolBarToggle()"> menu </mat-icon>
-          </button>
-          <div class="keep-icon" role="button">
-              <button mat-flat-button style="padding: 0%;"><img class="google"
-                      src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
-                      srcset="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png 1x, https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png 2x "
-                      alt="" aria-hidden="true" style="width:40px;height:40px;padding-top: 0px;"> </button>
-              <div class="keep-text" role="button">fundooNotes</div>
-          </div>
-      </div>
+    <div class="header">
+        <div class="header-main-1" role="button">
+            <button mat-icon-button>
+                <mat-icon (click)="onToolBarToggle()"> menu </mat-icon>
+            </button>
+            <div class="keep-icon" role="button">
+                <button mat-flat-button style="padding: 0%;"><img class="google"
+                        src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
+                        srcset="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png 1x, https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png 2x "
+                        alt="" aria-hidden="true" style="width:40px;height:40px;padding-top: 0px;"> </button>
+                <div class="keep-text" role="button">fundooNotes</div>
+            </div>
+        </div>
 
-      <div class="header-main-2">
-          <mat-form-field class="main-form" appearance="outline" style="width: 50vw;height: 70px;">
-              <div class="form">
-                  <button mat-icon-button>
-                      <mat-icon>search</mat-icon>
-                  </button>
-                  <input matInput placeholder="Search" style="padding: 0;">
-              </div>
-          </mat-form-field>
-      </div>
-      <div class="header-main-3">
-          <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-menu #menu="matMenu">
-                  <button mat-menu-item [routerLink]="['/login']">Logout</button>
-              </mat-menu>
-              <mat-icon fontSet="material-icons-outlined"> account_circle</mat-icon>
-          </button>
-      </div>
-  </div>
+        <div class="header-main-2">
+            <mat-form-field class="main-form" appearance="outline" style="width: 50vw;height: 70px;">
+                <div class="form">
+                    <button mat-icon-button>
+                        <mat-icon>search</mat-icon>
+                    </button>
+                    <input matInput placeholder="Search" style="padding: 0;">
+                </div>
+            </mat-form-field>
+        </div>
+        <div class="header-main-3">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item [routerLink]="['/login']">Logout</button>
+                </mat-menu>
+                <mat-icon fontSet="material-icons-outlined"> account_circle</mat-icon>
+            </button>
+        </div>
+    </div>
 </mat-card>
 <mat-sidenav-container id="sidenavContainer" fullscreen>
-   <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen" -->
-      opened>
-      <div class="sidenav-icons">
-          <button mat-icon-button class="menu-item">
-              <mat-icon fontSet="material-icons-outlined" (click)="onNotesClick()">lightbulb</mat-icon>
-              Notes
-          </button>
-      </div>
-      <div class="sidenav-icons">
-          <button mat-icon-button class="menu-item">
-              <mat-icon fontSet="material-icons-outlined">notifications</mat-icon>
-              Reminders
-          </button>
-      </div>
-      <div class="sidenav-icons">
-          <button mat-icon-button class="menu-item">
-              <mat-icon fontSet="material-icons-outlined">edit</mat-icon>
-              Edit Labels
-          </button>
-      </div>
-      <div class="sidenav-icons">
-          <button mat-icon-button class="menu-item">
-              <mat-icon fontSet="material-icons-outlined" (click)="onArchiveClick()">archive</mat-icon>
-              Archive
-          </button>
-      </div>
-      <div class="sidenav-icons">
-          <button mat-icon-button class="menu-item">
-              <mat-icon fontSet="material-icons-outlined" (click)="onTrashClick()">delete
-              </mat-icon>
-              Bin
-          </button>
-      </div>
-  </mat-sidenav>
+    <mat-sidenav mode="side" #sidenav id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen"
+        opened>
+        <div class="sidenav-icons">
+            <button mat-icon-button class="menu-item">
+                <mat-icon fontSet="material-icons-outlined" (click)="onNotesClick()">lightbulb</mat-icon>
+                Notes
+            </button>
+        </div>
+        <div class="sidenav-icons">
+            <button mat-icon-button class="menu-item">
+                <mat-icon fontSet="material-icons-outlined">notifications</mat-icon>
+                Reminders
+            </button>
+        </div>
+        <div class="sidenav-icons">
+            <button mat-icon-button class="menu-item">
+                <mat-icon fontSet="material-icons-outlined">edit</mat-icon>
+                Edit Labels
+            </button>
+        </div>
+        <div class="sidenav-icons">
+            <button mat-icon-button class="menu-item">
+                <mat-icon fontSet="material-icons-outlined" (click)="onArchiveClick()">archive</mat-icon>
+                Archive
+            </button>
+        </div>
+        <div class="sidenav-icons">
+            <button mat-icon-button class="menu-item">
+                <mat-icon fontSet="material-icons-outlined" (click)="onTrashClick()">delete
+                </mat-icon>
+                Bin
+            </button>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <div class="content">
+            <div >
+<form name="form" [formGroup]="myForm" >
+             <div class="main-content">
+               <div class="placeholder">
+                   <label >
+                    <textarea formControlName="title" class="title" matInput placeholder="Title" autocomplete="off" ></textarea> 
+                   </label>
+               </div>
+               <div class="placeholder">
+                   <label >
+                       <input type="text" placeholder="note" class="matinput" formControlName="note">
+                   </label>
+               </div>
+              
+               <div class="close-button">
+                <div class="note-icon">
+                    <app-icons></app-icons>
+                </div>
+                <button mat-button (click)="close()">close</button>
+            </div>
+               
+               </div>
+               </form>
 
-  <mat-sidenav-content class="main-content" [ngStyle]="{ 'margin-left.px': contentMargin }">
-
-
-      <!-- <div class="main-addnote">
-          <app-addnote></app-addnote>
-      </div>
-      <div class="main-getnote">
-          <app-getnote></app-getnote>
-      </div> -->
-      <div>
-          <router-outlet></router-outlet>
-      </div>
-
-  </mat-sidenav-content>
-</mat-sidenav-container>
+               <div *ngFor = "let notes of arr" class="getnote">
+                 <app-getnote [note] = notes ></app-getnote>
+               </div>
+            </div>
+        </div>
+     </mat-sidenav-content>

@@ -1,5 +1,6 @@
 import { hasLifecycleHook } from "@angular/compiler/src/lifecycle_reflector";
-import { Component, OnInit } from "@angular/core"
+import { Component, Input, OnInit } from "@angular/core"
+import { DataserviceService } from "src/app/Services/dataservice.service";
 
 @Component({
   selector: 'app-getnote',
@@ -8,15 +9,16 @@ import { Component, OnInit } from "@angular/core"
 })
 export class GetnoteComponent implements OnInit {
   public data: any
-   arr: Array<{title: any, description: any}> = [{"title":"hello","description":"world"},{"title":"I","description":"loveCoding"}];
+   arr: Array<{title: any, description: any}> = [{"title":"hello","description":"world"},{"title":"I","description":"loveCoding"},{"title":"jai shri Ram","description":"jai shri Ram"},{"title":"jai shri Ram","description":"jai shri Ram"}];
    
   id: any
   collaborator = ""
 
-  constructor() {
+  constructor(private dataservice:DataserviceService) {
     this.submit()
     this.addNote()
    }
+   @Input() note: any;
 
   ngOnInit(): void {
   }
