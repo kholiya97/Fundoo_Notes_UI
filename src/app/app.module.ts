@@ -31,6 +31,7 @@ import { CreatenotesComponent } from './Pages/createnotes/createnotes.component'
 import { GetnoteComponent } from './Pages/getnote/getnote.component';
 import { DisplayComponent } from './Pages/display/display.component';
 import { IconsComponent } from './Pages/icons/icons.component';
+import { ColorpaletteComponent } from './Pages/getnote/colorpalette/colorpalette.component';
 
 //import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import {CUSTOM_ELEMENTS_SCHEMA} from `@angular/core`;
@@ -46,7 +47,8 @@ import { IconsComponent } from './Pages/icons/icons.component';
     CreatenotesComponent,
     GetnoteComponent,
     DisplayComponent,
-    IconsComponent
+    IconsComponent,
+    ColorpaletteComponent
   
   
     

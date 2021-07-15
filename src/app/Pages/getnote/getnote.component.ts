@@ -9,6 +9,7 @@ import { DataserviceService } from "src/app/Services/dataservice.service";
 })
 export class GetnoteComponent implements OnInit {
   public data: any
+  public backgroundColor = 'white'; //default
    arr: Array<{title: any, description: any}> = [{"title":"hello","description":"world"},{"title":"I","description":"loveCoding"},{"title":"jai shri Ram","description":"jai shri Ram"},{"title":"jai shri Ram","description":"jai shri Ram"}];
    
   id: any
@@ -69,6 +70,9 @@ export class GetnoteComponent implements OnInit {
     //   console.log(res)
     //   this.submit()
     // })
+  }
+  updateBackgroundColor(colorCode: string) {
+    this.backgroundColor = colorCode;
   }
 }
 

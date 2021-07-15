@@ -1,0 +1,21 @@
+.color-container {
+    height: 200px;
+    padding: 0.4rem;
+    width: 350px;
+    border: 8px solid grey;
+  }
+  
+  .color-box {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    border: 0.01rem solid white;
+  }
+  
+  .selected {
+    border: 0.01rem solid black;
+  }
+  
