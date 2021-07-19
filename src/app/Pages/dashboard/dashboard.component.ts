@@ -10,13 +10,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   userName = "Himanshu";
   isMenuOpen = false;
+  open=false;
   contentMargin = 240
   data: any
-  // arr: any
-  // length: any
-  // trashClick = false
-  // notesclick = false
-  // archiveClick = false
   hide = true;
   errors:any;
 
@@ -32,60 +28,35 @@ export class DashboardComponent implements OnInit {
     }
   }
   get f() { return this.myForm.controls; }
+
   myForm = new FormGroup({
     title:new FormControl(),
     note:new FormControl(),
   })
+  
   close(){
-    
-      let data = {
-        "title": this.f.title.value,
-        "note":this.f.note.value
-      }
-      this.arr.push(data);
+    let data = {
+      "title": this.f.title.value,
+      "note":this.f.note.value
     }
+      this.arr.push(data);
+  }
  
   ngOnInit(): void {
-    this.arr = [{"title":"harshpal","notes":"jai shri ram"},{"title":"hi","notes":"i love coding"}
-   
-    ];}
-  submit() {
-    // this.dataservice.getNotes().subscribe(res => {
-    //   this.data = res
-    //   this.arr = this.data.data
-    //   this.arr = this.arr.reverse()
-    //   this.length = this.arr.length
-    //   return this.length
+    this.arr = [{"title":"jai","note":"jai shri ram"},{"title":"hi","note":"i love coding"}];}
 
-    // })
-  }
+  submit() {}
+
   onTrashClick() {
     this.arr.pop();
-  //   this.trashClick = !this.trashClick
-  //   if (this.trashClick == true) {
-  //     this.route.navigate(['dashboard/trash']);
-  //     return this.trashClick = false
-  //   }
   }
 
-  onNotesClick() {
-    // this.notesclick = !this.notesclick
-    // if (this.notesclick == true) {
-    //   this.route.navigate(['dashboard/notes']);
-    //   return this.notesclick = false
-    // }
+  onNotesClick() {}
+
+  onArchiveClick() {}
+  openbox() {
+    this.open=!this.open;
   }
-  onArchiveClick() {
-    
-      // this.archiveClick = !this.archiveClick
-      // if (this.archiveClick == true) {
-      //   this.route.navigate(['dashboard/archive']);
-      //   return this.archiveClick = false
-      }
-    }
+  
 
-
- // this.archiveClick = !this.archiveClick
-      // if (this.archiveClick == true) {
-      //   this.route.navigate(['dashboard/archive']);
-      //   return this.archiveClick = false
+}

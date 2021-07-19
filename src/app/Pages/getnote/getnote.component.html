@@ -24,8 +24,8 @@
                     </button>
                     <button mat-icon-button [matMenuTriggerFor]="menu1">
                         <mat-menu #menu1="matMenu">
-                            <button mat-menu-item>
-                                <div>
+                            <button mat-menu-item class="colorpalette">
+                                <div class="colorpalette">
                                     <app-colorpalette (colorChanged)="updateBackgroundColor($event)"></app-colorpalette>
                                 </div>
                                 <!-- <app-archivenote></app-archivenote> -->

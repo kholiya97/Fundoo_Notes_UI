@@ -1,18 +1,23 @@
 .color-container {
-    height: 200px;
+    height: 160px;
     padding: 0.4rem;
-    width: 350px;
+    width: 220px;
     border: 8px solid grey;
+    display:flex;
+    flex-wrap:wrap;
+
   }
   
   .color-box {
-    height: 4rem;
-    width: 4rem;
+    height: 1rem;
+    width: 1rem;
     margin-right: 1rem;
     margin-left: 2rem;
     display: inline-block;
     border-radius: 50%;
     border: 0.01rem solid white;
+    display: flex;
+    flex-wrap:wrap;
   }
   
   .selected {

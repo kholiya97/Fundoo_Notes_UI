@@ -181,11 +181,42 @@ background: #eee;
   justify-content:space-between;
   margin-top: 20px;
   margin-left: -2px;
-  margin-right: 1000px;
+  margin-right: 100px;
 }
 .getnote{
   display:table-cell;
   height: 240px;
   width:240px;
 }
-
+.main-content{
+  border: 2px solid #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 600px;
+  //height:150px;
+  border-radius: 10px;
+  margin-top: 50px;
+  }
+  .close{
+    margin-left: 180px;
+  }
+  .content {
+    height: calc(100vh);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  .title{
+    width: 150x;
+      height: 30px;
+      margin-left:20px;
+      appearance: standard;
+      border:none ;
+  }
+  .notebox{
+    // background-color: red;
+    width: 100%;
+  }

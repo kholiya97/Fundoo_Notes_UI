@@ -20,16 +20,23 @@
 .main-box{
     display: flex;
     justify-content:flex-start;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 .box{
     display: flex;
     justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 .icons{
     padding-top:15px;
     //padding-bottom: 50px;
+}
+.colorpalette{
+    height: 200px;
+    width: 350px;
+   display: grid;
+   position: relative;
 }
